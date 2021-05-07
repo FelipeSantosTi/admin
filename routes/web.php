@@ -15,7 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::prefix('admin')->namespace('Admin')->group(function () {
+Route::prefix('admin')->namespace('Admin')->middleware('auth')->group(function () {
+
+    // DASHBOARD
+//    Route::get('/', 'DashboardController@index')->name('dashboard');
 
 });
 
