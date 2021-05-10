@@ -187,7 +187,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => '/admin',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -224,7 +224,14 @@ return [
     */
 
     'menu' => [
+        [
+            'text' => 'Dashboard',
+            'url'  => 'admin',
+            'icon' => 'fas fa-tachometer-alt',
+        ],
+
         ['header' => 'account_settings'],
+
         [
             'text' => 'profile',
             'url'  => 'admin/settings',
@@ -234,6 +241,11 @@ return [
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
+        ],
+        [
+            'text' => 'Usuários',
+            'url'  => 'admin/users',
+            'icon' => 'fas fa-users',
         ],
     ],
 

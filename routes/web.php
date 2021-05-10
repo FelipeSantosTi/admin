@@ -17,11 +17,14 @@ Route::get('/', function () {
 
 Route::prefix('admin')->namespace('Admin')->middleware('auth')->group(function () {
 
+    // USERS
+    Route::resource('users', 'UserController');
+
     // DASHBOARD
-//    Route::get('/', 'DashboardController@index')->name('dashboard');
+    Route::get('/', 'DashboardController@index')->name('dashboard');
 
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
